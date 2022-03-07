@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title> คำสั่งแต่งตั้ง</title>
+    <title> คำสั่งแต่งตั้ง </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -37,7 +37,7 @@
             echo "Not found!";
         } else {
             echo "Found " . $result->num_rows . " record(s).";
-             
+            // สร้างตัวแปรเพื่อเก็บข้อความ html 
             $table = "<table class='table table-hover'>
                         <thead>
                             <tr>
@@ -57,7 +57,7 @@
             // 
             $i = 1; 
 
-            
+            // ดึงข้อมูลออกมาทีละแถว และกำหนดให้ตัวแปร row 
             while($row = $result->fetch_object()){ 
                 $table.= "<tr>";
                 $table.= "<td>" . $i++ . "</td>";
